@@ -1,0 +1,3 @@
+rootProject.name = 'how_it_runs'
+
+include ':app'
