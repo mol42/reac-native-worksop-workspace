@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { AppRegistry, Image } from 'react-native';
+import { AppRegistry, Image, View } from 'react-native';
 
 export default class AppWithProps extends Component {
   render() {
@@ -7,7 +7,9 @@ export default class AppWithProps extends Component {
       uri: 'https://upload.wikimedia.org/wikipedia/commons/d/de/Bananavarieties.jpg'
     };
     return (
-      <Image source={pic} style={{flex: 1, flexDirection : "column", height : null, resizeMode : "contain" }}/>
+      <View style={{flex: 1}}>
+        <Image source={pic} style={{ width : 100, height : 100, resizeMode : "contain" }}/>
+      </View>
     );
   }
 }
