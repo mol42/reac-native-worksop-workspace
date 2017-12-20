@@ -23,6 +23,10 @@ import {
  *  değerlerinden birini alabilir. space-around ve space-between kafa karıştırıcı olabilir
  *  aralarındaki fark şudur, space-around ile her view'ın *etrafında* eşit uzunlukta boşluk
  *  bırakılır. space-between ile view'lar arasında eşit uzunlukta boşluk bırakılır.
+ * 
+ *  alignItems için şu propertyler kullanılabilir : 'flex-start' || 'flex-end' || 'center' || 'stretch'
+ *  burada justifyContent ile tek farklı olan stretch'tir ve aktif axis içinde baştan sona kaplamayı
+ *  sağlar.
  */
 export default class App3 extends Component {
 

@@ -1,0 +1,17 @@
+# Ana ekseni seçmek için :
+flexDirection: 'column' || 'row'
+
+# Ana eksen üzerinde hizalamak için :
+justifyContent: 'flex-start' || 'flex-end' || 'center' || 'space-around' || 'space-between'
+
+# Ters eksen üzerinde hizalamak için :
+alignItems: 'flex-start' || 'flex-end' || 'center' || 'stretch'
+
+# Ters eksen üzerinde tekil olarak komponentleri hizalamak için :
+alignSelf: 'flex-start' || 'flex-end' || 'center' || 'stretch' || 'auto'
+
+# Eksen üzerinde yeterli boşluk kalmazsa alt satır/sütuna geçmek için :
+flexWrap: 'wrap' || 'nowrap'
+
+# Flex değeri bir sayıdır ve tam veya ondalıklı olabilir
+flex: sayı (örn : 1, 1/2)
