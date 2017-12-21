@@ -1,9 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import React, { Component } from 'react';
 import {
   Platform,
@@ -13,11 +7,8 @@ import {
 } from 'react-native';
 
 /**
- * React Native ile flexbox varsayılan direction olarak column 
- * kullanmaktadır. Diğer opsiyon row'dur.
- * 
- * column ile view'lar yukarıdan aşağıya doğru sıra ile yerleştirilirken
- * row ile soldan sağa doğru yerleştirilmektedir.
+ * React Native aynı React gibi stil nesnesi veya inline stiller kullanabiliyor.
+ * Ayrıca stiller kombine edilebiliyor.
  */
 export default class App extends Component {
 

@@ -13,7 +13,7 @@ import {
  * column ile view'lar yukarıdan aşağıya doğru sıra ile yerleştirilirken
  * row ile soldan sağa doğru yerleştirilmektedir.
  */
-export default class Styling2 extends Component {
+export default class Styling3 extends Component {
 
   render() {
     return (
@@ -22,7 +22,7 @@ export default class Styling2 extends Component {
             <View style={{flex: 1, backgroundColor : "blue"}}></View>
         </View> 
         <View style={styles.body}>
-            <Text>aaaa</Text>
+            <View style={styles.buttonSample}></View>
         </View>
       </View>
     );
@@ -46,6 +46,16 @@ const styles = StyleSheet.create({
       borderWidth : 2,
       paddingTop : 50,
       borderColor : "green",
-      backgroundColor : "yellow"
+      backgroundColor : "gray",
+      alignItems : "center"
+  },
+  buttonSample : {
+        width: 200,
+        borderWidth : 2,
+        borderRadius : 10,
+        marginTop : 20,
+        paddingTop : 50,
+        borderColor : "red",
+        backgroundColor : "green"
   }
 });
