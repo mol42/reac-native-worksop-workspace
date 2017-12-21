@@ -1,0 +1,19 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            let handler = "Test";
+            
+            var obj = {
+                // handler : value yazmak yerine eğer değişken ile 
+                // obje key'i aynı isimde ise handler yazmamız yetiyor.
+                handler,
+                // Computed (dynamic) property names
+                [ 'prop_' + (() => 42)() ]: 42
+            };
+
+            console.log(obj);
+        </script>
+    </body>
+</html>
+

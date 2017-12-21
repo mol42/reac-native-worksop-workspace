@@ -1,0 +1,36 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            // Basic literal string creation
+            let text1 = `In JavaScript '\n' is a line-feed.`;
+
+            console.log("text1 ->", text1);
+
+            // Multiline strings
+            let text2 = `In JavaScript this was
+                            not legal.`
+
+            console.log("text2 ->", text2);
+
+            // String interpolation
+            var name = "Bob", time = "today";
+            console.log(`Hello ${name}, how are you ${time}?`);
+
+            // Construct an HTTP request prefix is used to interpret the replacements and construction
+            let credentials = "X_HTTP";
+            let a = "get";
+            let b = "age";
+            let foo = "5";
+            let bar = "10";
+            let url = `http://foo.org/bar?a=${a}&b=${b}
+                Content-Type: application/json
+                X-Credentials: ${credentials}
+                { "foo": ${foo},
+                "bar": ${bar}}`;
+
+            console.log("url ->", url);
+        </script>
+    </body>
+</html>
+

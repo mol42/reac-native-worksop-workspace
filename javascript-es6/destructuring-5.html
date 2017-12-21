@@ -1,0 +1,45 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            function getASTNode() {
+                return { op: 1, n : "new", lhs: { op: 2 }, rhs: 3, tsr : 5 }
+            }
+            // list matching
+            var [a, , b] = [1,2,3];
+
+            console.log("a ->", a, "b ->", b);
+
+            // object matching
+            var { op: a, lhs: { op: b }, rhs: c } = getASTNode();
+
+            console.log("a ->", a, "b ->", b, "c ->", c);
+
+            // object matching shorthand
+            // binds `op`, `lhs` and `rhs` in scope
+            var {op, lhs, rhs} = getASTNode()
+
+            // Can be used in parameter position
+            function g({name: x}) {
+                console.log(x);
+            }
+            g({name: 5});
+
+            // Can be used in parameter position
+            function ff({name}) {
+                console.log(arguments[0]);
+                console.log(name);
+            }
+            ff({name: 5});
+
+            // Fail-soft destructuring
+            var [a] = [];
+            a === undefined;
+
+            // Fail-soft destructuring with defaults
+            var [a = 1] = [];
+            a === 1;
+        </script>
+    </body>
+</html>
+
