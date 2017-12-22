@@ -2,23 +2,43 @@
     <head></head>
     <body>
         <script>
-            class BaseClass {
-                constructor() {
+            // *********************
+            // Bu noktada normal bir for loop'u 
+            // ile döngü kuruyoruz
+            function count(n) {
+                var res = []
+                for (var x = 0; x < n; x++) {
+                    res.push(x)
                 }
+                return res
+            }
 
-                getName() {
-                    console.log("BaseClass")
+            for (var x of count(5)) {
+                console.log(x)
+            }
+
+            //*********************
+            // generator ile normal bir döngü kurmuyoruz 
+            // bunun yerine generator'u kullanan kişinin
+            // yöneteceği durma noktalarına sahip bir lojik
+            // kuruyoruz.
+            function* count() {
+                for (var x = 0; x < 5; x++) {
+                    // kod buraya geldiği zaman duruyor ve
+                    // generatorun sahibi next diyene kadar ilerlemiyor.
+                    console.log(yield x); 
                 }
             }
 
-            class ExtendedClass extends BaseClass {
-                constructor() {
-                    super();
+            let sendToIteratorIndex = 100;
+            let generator = count();
+            while (true) {
+                let next = generator.next(sendToIteratorIndex++);
+                if (next.done) {
+                    break;
                 }
+                console.log("next ->", next);
             }
-
-            let instance = new ExtendedClass();
-            instance.getName();
         </script>
     </body>
 </html>
