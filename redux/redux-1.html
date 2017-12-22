@@ -4,41 +4,41 @@
         
     </head>
     <body>
-        <div id="canvas"></div>
-
+        <div id="counter">-</div>
+        <button id="button">Inc</button>
+        
         <script>
-            function counter (state, action) {
-                
-                if (typeof state == 'undefined') {
-                    state = 0;
-                }
+            var initialState = {counter: 0}
+
+            function reducer(state, action) {
+              if (action.type === 'INCREMENT') {
+                state = Object.assign({}, state, {counter: state.counter + 1})
+              }
+              return state
+            }
+
+            var store = Redux.createStore(reducer, initialState)
             
-                switch (action.type) {
-                    case 'INCREMENT':
-                        state++;
-                    break;
-                    case 'DECREMENT':
-                        state--;
-                    break;
-                }
-                return state;
+            function render(state) {
+                document.getElementById('counter').textContent = state.counter;
             }
-    
-            function render() {
-                document.querySelector('#canvas').innerHTML = store.getState();
+            
+            document.getElementById('button').addEventListener('click', function() {
+                incrementCounter()
+            })
+            
+            function incrementCounter() {
+              store.dispatch({
+                type: 'INCREMENT'
+              })
             }
-    
-            var store = Redux.createStore(counter);
-            store.subscribe(render);
-            render();
-    
-            setInterval(function() {
-                store.dispatch({type: 'DECREMENT'});
-            }, 1000);
-    
-            document.addEventListener('click', function() {
-                store.dispatch({type: 'INCREMENT'});
-            });
+            
+            store.subscribe(function() {
+              render(store.getState())
+            })
+            
+            // Render the initial state
+            render(store.getState())
             </script>
     </body>
 </html>
