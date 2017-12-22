@@ -6,17 +6,21 @@
     <body>
         <div id="counter">-</div>
         <button id="button">Inc</button>
-        
+
         <script>
+
+            // redux initial state hazırlanır
             var initialState = {counter: 0}
 
+            // reducer hazırlanır
             function reducer(state, action) {
               if (action.type === 'INCREMENT') {
                 state = Object.assign({}, state, {counter: state.counter + 1})
               }
-              return state
+              return state;
             }
 
+            // initial state ve reducer yardımı ile store oluşturulur
             var store = Redux.createStore(reducer, initialState)
             
             function render(state) {
@@ -33,12 +37,14 @@
               })
             }
             
+            // store içinde bir değişiklik gerçekleşirse re-render yapmak gereklidir
+            // bunu sağlamak için store değişikliklerini dinleriz.
             store.subscribe(function() {
               render(store.getState())
             })
             
-            // Render the initial state
-            render(store.getState())
+            // ilk render işlemini gerçekleştir
+            render(store.getState());
             </script>
     </body>
 </html>
