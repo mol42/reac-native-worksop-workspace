@@ -7,11 +7,7 @@ import {
 } from 'react-native';
 
 /**
- * React Native ile flexbox varsayılan direction olarak column 
- * kullanmaktadır. Diğer opsiyon row'dur.
- * 
- * column ile view'lar yukarıdan aşağıya doğru sıra ile yerleştirilirken
- * row ile soldan sağa doğru yerleştirilmektedir.
+ * CSS box model ile ilgili padding, bottom, ayarlamaları yapılabiliyor.
  */
 export default class Styling4 extends Component {
 
@@ -19,7 +15,9 @@ export default class Styling4 extends Component {
     return (
       <View style={styles.container}>
         <View style={styles.body}>
-            <View style={styles.buttonSample}></View>
+            <View style={styles.buttonSample}>
+              <Text style={styles.text}>HELLO HERE</Text>
+            </View>
         </View>
       </View>
     );
@@ -29,5 +27,29 @@ export default class Styling4 extends Component {
 const styles = {
   container: {
     flex: 1
+  },
+  body : {
+    flex: 1,
+    backgroundColor : "white",
+    justifyContent : "center",
+    alignItems : "center"
+  },
+  buttonSample : {
+    width: 200,
+    height: 100,
+    borderWidth: 2,
+    borderColor : "red",
+    paddingTop : 20,
+    paddingBottom : 20,
+    paddingLeft: 20,
+    paddingRight : 10,
+    marginTop : 10,
+    borderRadius : 5
+  },
+  text : {
+    color : "orange",
+    fontSize: 18,
+    fontWeight : "bold",
+    backgroundColor : "blue"
   }
 };
