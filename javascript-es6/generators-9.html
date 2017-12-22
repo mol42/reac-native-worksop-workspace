@@ -1,0 +1,24 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            class BaseClass {
+                constructor() {
+                }
+
+                getName() {
+                    console.log("BaseClass")
+                }
+            }
+
+            class ExtendedClass extends BaseClass {
+                constructor() {
+                    super();
+                }
+            }
+
+            let instance = new ExtendedClass();
+            instance.getName();
+        </script>
+    </body>
+</html>

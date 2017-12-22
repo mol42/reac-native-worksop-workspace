@@ -5,40 +5,44 @@
             function getASTNode() {
                 return { op: 1, n : "new", lhs: { op: 2 }, rhs: 3, tsr : 5 }
             }
-            // list matching
+            // array ataması
             var [a, , b] = [1,2,3];
 
             console.log("a ->", a, "b ->", b);
 
-            // object matching
+            // obje ataması
             var { op: a, lhs: { op: b }, rhs: c } = getASTNode();
 
             console.log("a ->", a, "b ->", b, "c ->", c);
 
-            // object matching shorthand
-            // binds `op`, `lhs` and `rhs` in scope
+            // kısaltma özelliği ile op, lhs
+            // rhs kısımlarının atanması
             var {op, lhs, rhs} = getASTNode()
 
-            // Can be used in parameter position
+            // aktarılan parametredeki name alanı
+            // x içine aktarılıyor
             function g({name: x}) {
                 console.log(x);
             }
             g({name: 5});
 
-            // Can be used in parameter position
+            // aktarılan paremtreden kısaltma
+            // yaparak istediğimiz kısmını alabiliyoruz
             function ff({name}) {
                 console.log(arguments[0]);
                 console.log(name);
             }
             ff({name: 5});
 
-            // Fail-soft destructuring
+            // eğer aktarılacak değer yoksa ise undefined
+            // atanır
             var [a] = [];
-            a === undefined;
+            console.log("a === undefined ->", a === undefined);
 
-            // Fail-soft destructuring with defaults
+            // eğer aktarılacak değer yoksa ise varsayılan
+            // değer aktarabiliyoruz
             var [a = 1] = [];
-            a === 1;
+            console.log("a === 1 ->", a === 1);
         </script>
     </body>
 </html>
