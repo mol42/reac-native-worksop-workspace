@@ -26,7 +26,8 @@
                 for (var x = 0; x < 5; x++) {
                     // kod buraya geldiği zaman duruyor ve
                     // generatorun sahibi next diyene kadar ilerlemiyor.
-                    console.log(yield x); 
+                    let incomingValue = yield x;
+                    console.log("incomingValue ->", incomingValue); 
                 }
             }
 
@@ -34,10 +35,10 @@
             let generator = count();
             while (true) {
                 let next = generator.next(sendToIteratorIndex++);
+                console.log("next ->", next);
                 if (next.done) {
                     break;
                 }
-                console.log("next ->", next);
             }
         </script>
     </body>
