@@ -10,7 +10,7 @@ import {
 export default class App2 extends Component {
 
   render() {
-    return this.render_Flex_Row();
+    return this.render_Flex_Column();
   }
 
   render_Flex_Row() {

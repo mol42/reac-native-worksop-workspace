@@ -28,7 +28,8 @@ const styles = StyleSheet.create({
     flex: 1
   },
   header : {
-      height : 50,
+      height : 100,
+      flex : 1, // flex heighten önce hesaplanıyor.
       backgroundColor : "red"
   }
 });

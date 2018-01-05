@@ -19,10 +19,10 @@ export default class Styling3 extends Component {
     return (
       <View style={styles.container}>
         <View style={[styles.header, {paddingTop : Platform.OS == "ios" ? 20 : 0}]}>
-            <View style={{flex: 1, backgroundColor : "blue"}}></View>
+            <View style={{flex: 1, backgroundColor : "black"}}></View>
         </View> 
         <View style={styles.body}>
-            <View style={styles.buttonSample}></View>
+            <View style={styles.buttonSample}><Text>BUTON</Text></View>
         </View>
       </View>
     );

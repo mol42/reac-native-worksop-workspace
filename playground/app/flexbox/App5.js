@@ -15,10 +15,10 @@ import {
  * ile ilgili bir oynama yapmaz ve komponentlerin ekranın dışına taşmasına izin verir.
  *  
  */
-export default class App4 extends Component {
+export default class App5 extends Component {
 
     render() {
-        return this.render_withWrap();
+        return this.render_withNoWrap();
     }
 
     render_withWrap() {

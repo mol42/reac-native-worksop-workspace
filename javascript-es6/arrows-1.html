@@ -3,6 +3,7 @@
     <body>
         <script>
             let evens = [2,4,6,8];
+            let fives = [];
 
             // örnek arrow kullanımları
             var odds = evens.map(v => v + 1);
@@ -14,20 +15,21 @@
             console.log("pairs ->", pairs);
 
             // metod body'leri için örnek
-            nums.forEach(v => {
+            nums.forEach((v) => {
             if (v % 5 === 0)
                 fives.push(v);
             });
 
             // Lexical this
             var bob = {
-            _name: "Bob",
-            _friends: [],
-            printFriends() {
-                this._friends.forEach(f =>
-                console.log(this._name + " knows " + f));
+                _name: "Bob",
+                _friends: [],
+                printFriends() {
+                    this._friends.forEach(f =>
+                    console.log(this._name + " knows " + f));
+                }
             }
-            }
+            console.log(bob.printFriends());
         </script>
     </body>
 </html>

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { AppRegistry, Text, View } from 'react-native';
 
+import TestComponent from "./TestComponent";
 
 /**
  * react 3
@@ -21,7 +22,7 @@ export default class FirstComponent extends Component {
       <View style={{alignItems: 'center', marginTop : 20}}>
         <Greeting name='Test 1' />
         <Greeting name='Test 2' />
-        <Greeting name='Test 3' />
+        <TestComponent name='Test 3' />
       </View>
     );
   }

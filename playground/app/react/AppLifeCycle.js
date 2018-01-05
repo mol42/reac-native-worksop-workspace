@@ -59,12 +59,14 @@ class Counter extends Component {
   constructor(props) {
     super(props);
     this.state = {counter: props.start, showHide : true};
+  }
 
+  componentWillMount() {
     // Toggle the state every second
     setInterval(() => {
       this.setState(previousState => {
         let newCounter = previousState.counter + 1;
-        let showHide = newCounter - this.props.start > 5 ? false : true;
+        let showHide = newCounter - this.props.start > 20 ? false : true;
         return { counter: newCounter, showHide };
       });
     }, 1000);
@@ -81,7 +83,7 @@ class Counter extends Component {
   }
 }
 
-export default class AppWithState extends Component {
+export default class AppLifeCycle extends Component {
   render() {
     return (
       <View style={{flex: 1, justifyContent : "center", alignItems : "center"}}>

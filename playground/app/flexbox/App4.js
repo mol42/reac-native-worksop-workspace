@@ -23,7 +23,7 @@ import {
 export default class App4 extends Component {
 
     render() {
-        return this.render_column_justifySpaceBetween();
+        return this.render_row_justifySpaceBetween();
     }
 
     render_column_justifySpaceBetween() {
@@ -35,7 +35,7 @@ export default class App4 extends Component {
               flexDirection: 'column',
               justifyContent: 'center',
             }}>
-              <View style={{width: 100, height: 100, alignSelf : "center", backgroundColor: 'powderblue'}} />
+              <View style={{width: 100, height: 100, alignSelf : "flex-end", backgroundColor: 'powderblue'}} />
               <View style={{width: 50, height: 50, backgroundColor: 'skyblue'}} />
               <View style={{width: 50, height: 50, backgroundColor: 'steelblue'}} />
             </View>
@@ -57,4 +57,7 @@ export default class App4 extends Component {
             </View>
           );
     }
+
+
+    
 }

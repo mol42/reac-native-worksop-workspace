@@ -16,7 +16,7 @@ import {
 export default class App extends Component {
 
   render() {
-    return this.render_Flex_Column();
+    return this.render_Flex_Row();
   }
 
   render_Flex_Column() {
@@ -48,9 +48,11 @@ export default class App extends Component {
   }
 }
 
-const stylesForColumn = StyleSheet.create({
+const stylesForColumn = {
   container: {
     flex: 1,
+    borderWidth: 5,
+    borderColor : "purple",
     flexDirection : "column" // bu varsayılan direction'dur.
   },
   box2 : {
@@ -61,15 +63,16 @@ const stylesForColumn = StyleSheet.create({
     flex: 3,
     backgroundColor : "black"
   }
-});
+};
 
 const stylesForRow = StyleSheet.create({
   container: {
     flex: 1,
-    flexDirection : "row"
+    // flexDirection : "row"
   },
   box2 : {
     flex: 2,
+    flexDirection : "row",
     backgroundColor : "red"
   },
   box3 : {

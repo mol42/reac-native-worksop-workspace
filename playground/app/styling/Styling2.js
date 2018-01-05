@@ -38,13 +38,14 @@ const styles = StyleSheet.create({
       width: "100%",
       position : "absolute",
       height : 50,
+      marginTop : 20,
       zIndex : 2,
       backgroundColor : "red"
   },
   body : {
       flex: 1,
       borderWidth : 2,
-      paddingTop : 50,
+      paddingTop : 40,
       borderColor : "green",
       backgroundColor : "yellow"
   }

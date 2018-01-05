@@ -19,6 +19,17 @@
             }
             // Pass each elem of array as argument
             f(...[1,2,3]) == 6;
+
+
+            let obj1 = {
+                test : 5
+            };
+
+            let obj2 = {
+                ...obj1,
+                name : "test"
+            }
+            console.log(obj2);
             
         </script>
     </body>

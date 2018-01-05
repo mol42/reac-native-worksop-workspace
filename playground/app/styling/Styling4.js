@@ -30,7 +30,7 @@ const styles = {
   },
   body : {
     flex: 1,
-    backgroundColor : "white",
+    backgroundColor : "blue",
     justifyContent : "center",
     alignItems : "center"
   },
@@ -38,6 +38,7 @@ const styles = {
     width: 200,
     height: 100,
     borderWidth: 2,
+    backgroundColor : "white",
     borderColor : "red",
     paddingTop : 20,
     paddingBottom : 20,

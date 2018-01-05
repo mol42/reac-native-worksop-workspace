@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { AppRegistry, Text } from 'react-native';
+import { AppRegistry, Text, View } from 'react-native';
 
 /**
  * react 1
@@ -9,7 +9,9 @@ import { AppRegistry, Text } from 'react-native';
 export default class HelloWorldApp extends Component {
   render() {
     return (
-      <Text>Hello world!</Text>
+      <View style={{paddingTop : 20}}>
+        <Text>Hello world!</Text>
+      </View>
     );
   }
 }

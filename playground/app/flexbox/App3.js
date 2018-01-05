@@ -112,8 +112,8 @@ export default class App3 extends Component {
             <View style={{
               flex: 1,
               flexDirection: 'column',
-              justifyContent: 'center',
-              alignItems: 'flex-start',
+              justifyContent: 'space-around',
+              alignItems: 'flex-end',
             }}>
               <View style={{width: 50, height: 50, backgroundColor: 'powderblue'}} />
               <View style={{width: 50, height: 50, backgroundColor: 'skyblue'}} />
