@@ -18,7 +18,7 @@ import {
 export default class App5 extends Component {
 
     render() {
-        return this.render_withNoWrap();
+        return this.render_withWrap();
     }
 
     render_withWrap() {

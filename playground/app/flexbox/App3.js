@@ -53,9 +53,9 @@ export default class App3 extends Component {
               flexDirection: 'column',
               justifyContent: 'center',
             }}>
-              <View style={{width: 50, height: 50, backgroundColor: 'powderblue'}} />
+              <View style={{width: 50, height: 10, backgroundColor: 'powderblue'}} />
               <View style={{width: 50, height: 50, backgroundColor: 'skyblue'}} />
-              <View style={{width: 50, height: 50, backgroundColor: 'steelblue'}} />
+              <View style={{width: 50, height: 10, backgroundColor: 'steelblue'}} />
             </View>
           );
     }   
@@ -113,7 +113,7 @@ export default class App3 extends Component {
               flex: 1,
               flexDirection: 'column',
               justifyContent: 'space-around',
-              alignItems: 'flex-end',
+              alignItems: 'flex-start',
             }}>
               <View style={{width: 50, height: 50, backgroundColor: 'powderblue'}} />
               <View style={{width: 50, height: 50, backgroundColor: 'skyblue'}} />

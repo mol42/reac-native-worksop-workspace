@@ -19,7 +19,7 @@ export default class Styling2 extends Component {
     return (
       <View style={styles.container}>
         <View style={[styles.header, {paddingTop : Platform.OS == "ios" ? 20 : 0}]}>
-            <View style={{flex: 1, backgroundColor : "blue"}}></View>
+            
         </View> 
         <View style={styles.body}>
             <Text>aaaa</Text>
@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
       width: "100%",
       position : "absolute",
       height : 50,
-      marginTop : 20,
+      marginTop : -5,
       zIndex : 2,
       backgroundColor : "red"
   },

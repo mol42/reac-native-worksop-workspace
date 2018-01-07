@@ -10,18 +10,26 @@ import TestComponent from "./TestComponent";
  */
 class Greeting extends Component {
   render() {
+    console.log(this.props);
+    let {name} = this.props.data;
+    let {useName} = this.props;
     return (
-      <Text>Hello {this.props.name}!</Text>
+      useName ? <Text>Hello {name}!</Text> : <Text>Hello!</Text>
     );
   }
 }
 
+const style = {alignItems: 'center', marginTop : 20}
+
 export default class FirstComponent extends Component {
   render() {
+    let data = {
+      name : "Tayfun"
+    }
     return (
-      <View style={{alignItems: 'center', marginTop : 20}}>
-        <Greeting name='Test 1' />
-        <Greeting name='Test 2' />
+      <View style={style}>
+        <Greeting name={'Test 3'} data={data} useName={false}/>
+        <Greeting name='Test 2' data={data} useName={true}/>
         <TestComponent name='Test 3' />
       </View>
     );

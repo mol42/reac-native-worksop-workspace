@@ -6,14 +6,14 @@
             // Bu noktada normal bir for loop'u 
             // ile döngü kuruyoruz
             function count(n) {
-                var res = []
-                for (var x = 0; x < n; x++) {
+                let res = []
+                for (let x = 0; x < n; x++) {
                     res.push(x)
                 }
                 return res
             }
 
-            for (var x of count(5)) {
+            for (let x of count(5)) {
                 console.log(x)
             }
 
@@ -23,7 +23,7 @@
             // yöneteceği durma noktalarına sahip bir lojik
             // kuruyoruz.
             function* count() {
-                for (var x = 0; x < 5; x++) {
+                for (let x = 0; x < 5; x++) {
                     // kod buraya geldiği zaman duruyor ve
                     // generatorun sahibi next diyene kadar ilerlemiyor.
                     let incomingValue = yield x;

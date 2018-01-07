@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { AppRegistry, Text, View } from 'react-native';
 
 /**
- * react 3
+ * react 2
  * 
  * React ile custom komponent oluşturma
  */

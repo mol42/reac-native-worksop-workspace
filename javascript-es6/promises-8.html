@@ -10,9 +10,7 @@
             }
             
             var p = timeout(1000).then(() => {
-                return timeout(2000);
-            }).then(() => {
-                throw new Error("hmm");
+                console.log("end of timeout");
             }).catch(err => {
                 console.log("error");
             })
