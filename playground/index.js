@@ -6,6 +6,8 @@ import App2 from "./app/flexbox/App2";
 import App3 from "./app/flexbox/App3";
 import App4 from "./app/flexbox/App4";
 import App5 from "./app/flexbox/App5";
+import AppWithHeader from "./app/flexbox/AppWithHeader";
+
 
 // styling
 import Styling1 from "./app/styling/Styling1";

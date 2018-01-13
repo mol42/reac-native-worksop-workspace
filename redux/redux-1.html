@@ -15,13 +15,17 @@
             // reducer hazırlanır
             function reducer(state, action) {
               if (action.type === 'INCREMENT') {
-                state = Object.assign({}, state, {counter: state.counter + 1})
+                return {
+                  ...state,
+                  counter : state.counter + 1
+                }
+                return state;
               }
               return state;
             }
 
             // initial state ve reducer yardımı ile store oluşturulur
-            var store = Redux.createStore(reducer, initialState)
+            var store = Redux.createStore(reducer, initialState);
             
             function render(state) {
                 document.getElementById('counter').textContent = state.counter;

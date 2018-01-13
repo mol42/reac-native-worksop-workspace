@@ -9,6 +9,11 @@ import { AppRegistry, Text, View } from 'react-native';
  */
 class Counter extends Component {
 
+  checked = "true";
+  state = {
+
+  }
+
   constructor(props) {
     super(props);
     // this.staerPoint = 
@@ -16,6 +21,11 @@ class Counter extends Component {
 
     // Toggle the state every second
     setInterval(() => {
+      /*
+      this.setState({
+        counter : this.state.countr + 1
+      });
+      */
       this.setState(previousState => {
         let newCounter = previousState.counter + 1;
         return { counter: newCounter };

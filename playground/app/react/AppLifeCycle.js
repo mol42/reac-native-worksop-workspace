@@ -66,7 +66,7 @@ class Counter extends Component {
     setInterval(() => {
       this.setState(previousState => {
         let newCounter = previousState.counter + 1;
-        let showHide = newCounter - this.props.start > 20 ? false : true;
+        let showHide = newCounter - this.props.start > 10 ? false : true;
         return { counter: newCounter, showHide };
       });
     }, 1000);

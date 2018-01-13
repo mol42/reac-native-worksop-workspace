@@ -45,6 +45,9 @@ export default class App extends Component {
         </View>
         <View style={styles.box3}>
 
+        </View> 
+        <View style={styles.box3_v2}>
+
         </View>        
       </View>
     );
@@ -88,5 +91,9 @@ const stylesForRow = StyleSheet.create({
   box3 : {
     flex: 3,
     backgroundColor : "black"
+  },
+  box3_v2 : {
+    flex: 3,
+    backgroundColor : "purple"
   }
 });
