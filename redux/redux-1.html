@@ -14,12 +14,13 @@
 
             // reducer hazırlanır
             function reducer(state, action) {
+              let newState = state;
               if (action.type === 'INCREMENT') {
-                return {
+                newState = {
                   ...state,
                   counter : state.counter + 1
                 }
-                return state;
+                return newState;
               }
               return state;
             }
@@ -34,10 +35,13 @@
             document.getElementById('button').addEventListener('click', function() {
                 incrementCounter()
             })
+
+            //*******
             
             function incrementCounter() {
               store.dispatch({
-                type: 'INCREMENT'
+                type: 'INCREMENT',
+                payload : 0
               })
             }
             

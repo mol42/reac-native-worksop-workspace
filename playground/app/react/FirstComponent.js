@@ -10,7 +10,7 @@ import TestComponent from "./TestComponent";
  */
 class Greeting extends Component {
   render() {
-    console.log(this.props);
+    console.log("Greeting render ->", this.props);
     let {name} = this.props.data;
     let {useName} = this.props;
     return (

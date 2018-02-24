@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { AppRegistry, Text, View } from 'react-native';
+import { AppRegistry, Text, View, TouchableOpacity } from 'react-native';
 
 /**
  * react 5
@@ -14,11 +14,11 @@ class CoolText extends Component {
     }
 
     componentWillMount() {
-        console.log("componentWillMount");
+        console.log("CoolText componentWillMount");
     }
 
     componentDidMount() {
-        console.log("componentDidMount");
+        console.log("CoolText componentDidMount");
     }
 
     componentWillUpdate() {
@@ -42,11 +42,12 @@ class CoolText extends Component {
     }
 
     componentWillReceiveProps(nextProps) {
-        console.log("componentWillReceiveProps");
+        console.log("CoolText componentWillReceiveProps this.props ->", this.props, " nextProps ->", nextProps);
         this.state.counter = nextProps.counter;
     }
 
     render() {
+      console.log("CoolText render");
         let {counter} = this.props;
         return (
           <Text>{counter}</Text>
@@ -58,7 +59,7 @@ class Counter extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {counter: props.start, showHide : true};
+    this.state = {counter: props.start, showHide : true, pressed : false};
   }
 
   componentWillMount() {
@@ -74,11 +75,15 @@ class Counter extends Component {
 
   render() {
     let {counter, showHide} = this.state;
+    /*
     if (!showHide) {
         return <Text>CoolText is gone</Text>;
     }
+    */
     return (
-      <CoolText counter={counter}></CoolText>
+      <TouchableOpacity onPress={() => console.log("test")}>
+        <CoolText counter={counter}></CoolText>
+      </TouchableOpacity>
     );
   }
 }

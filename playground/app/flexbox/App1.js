@@ -57,19 +57,16 @@ export default class App extends Component {
 const stylesForColumn = {
   container: {
     flex: 1,
-    //width : "100%",
-    //height: "100%",
-    //flex: 1,
     borderWidth: 5,
     borderColor : "purple",
-    flexDirection : "column" // bu varsayılan direction'dur.
+    // flexDirection : "column" // bu varsayılan direction'dur.
   },
   box2 : {
-    flex: 2,
+    flex: 1,
     backgroundColor : "red"
   },
   box3 : {
-    flex: 3,
+    flex: 1,
     backgroundColor : "black"
   },
   box1 : {

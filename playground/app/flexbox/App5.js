@@ -50,7 +50,7 @@ export default class App5 extends Component {
               borderWidth : 2,
               borderColor : "red",
               flexDirection: 'row',
-              flexWrap : "nowrap"
+              // flexWrap : "nowrap"
             }}>
               <View style={{width: 50, height: 50, backgroundColor: 'skyblue'}} />
               <View style={{width: 50, height: 50, backgroundColor: 'steelblue'}} />

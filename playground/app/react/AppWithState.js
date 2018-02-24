@@ -17,20 +17,19 @@ class Counter extends Component {
   constructor(props) {
     super(props);
     // this.staerPoint = 
-    this.state = {counter: props.start};
+    this.state = {
+      counter: props.start
+    };
+  }
 
-    // Toggle the state every second
-    setInterval(() => {
-      /*
-      this.setState({
-        counter : this.state.countr + 1
-      });
-      */
-      this.setState(previousState => {
-        let newCounter = previousState.counter + 1;
-        return { counter: newCounter };
-      });
-    }, 1000);
+  componentWillMount() {
+      // Toggle the state every second
+      setInterval(() => {
+        this.setState(previousState => {
+          let newCounter = previousState.counter + 1;
+          return { counter: newCounter };
+        });
+      }, 1000);
   }
 
   render() {

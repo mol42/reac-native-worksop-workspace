@@ -25,7 +25,7 @@ import {
 export default class App3 extends Component {
 
     render() {
-        return this.render_column_justifyCenter_alignFlexStart();
+        return this.render_column_justifySpaceBetween();
     }
 
     render_column_justifySpaceBetween() {
@@ -113,7 +113,7 @@ export default class App3 extends Component {
               flex: 1,
               flexDirection: 'column',
               justifyContent: 'space-around',
-              alignItems: 'flex-start',
+              alignItems: 'flex-end',
             }}>
               <View style={{width: 50, height: 50, backgroundColor: 'powderblue'}} />
               <View style={{width: 50, height: 50, backgroundColor: 'skyblue'}} />
